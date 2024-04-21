@@ -1,0 +1,1164 @@
+Resources : Complete JS Course by code with Harry
+            Replit.com
+
+
+
+//Introduction to JavaScript:
+
+
+
+
+
+
+JS is a dynamic typed language
+
+once u declare a variable we can store a number/string/array 
+
+
+where as in a static typed language datatype should be defined at variable declaration
+
+
+
+var a = 7   ----> Literal
+
+let a = 7  -----> Declaring Variables
+
+
+
+
+
+//const,var,let
+
+let and var declarations are mutable amongst types and values where var has a global scope
+
+let has a blocked scope, let declarations can be updated but not re-declared
+const declarations are not mutable be it a type/value. It has the blocked scope as well,
+
+when variables are only declared and not defined, var declarations are intialized with undefined whereas let declarations are not intialized
+const declarations need to be defined at declaration itself 
+
+
+
+
+
+
+
+//Datatypes
+
+There are 7 primitive(in-built) Datatypes
+
+NNSSBBU - Null,Number,Symbol,String,Boolean,,BigInt,Undefined 
+
+
+
+
+Object is not a primitive datatype it is a user-defined datatype
+
+let person = {
+    name:"koushik";
+    age:20;
+    gender:"male";
+}
+
+
+if a const object is declared the variable stores the reference of the object, and we can't change the variable to a num/string/another object; but we can append/update the key-value pairs for the declared & defined object. 
+
+
+
+
+
+
+
+
+
+
+//typeof operator
+typeof var_name gives datatype of the variable
+
+
+
+
+//Operators & Expressions
+
+=== vs ==
+=== compares the  value & datatype as well whereas the ==  compares the value only
+logical operators are operated on booleans, the operands must be booleans
+
+
+
+
+
+
+
+//Typecasting
+Number.parseInt("")
+
+
+// Strings 
+
+Strings are immutable and hence they cannot be changed or appended
+any string methods applied on them wont change the original string variable 
+if we want the new applied string method we need to store the string in a new variable
+
+
+
+// Arrays & Array Methods
+Unlike other programming languages arrays in JS store elements with different datatypes
+Arrays are mutable and hence values can be changed and appended.
+
+
+push() method appends an element at the end of an array
+pop() method removes an element at the end of an arrays
+
+unshift() method appends an element at the beginning of an array
+shift() method removes an element at the beginning of an array
+
+reverse() reverses the elements present in the array
+
+
+
+`delete` is an operator used to remove elements from an  array used as:
+    This modifies the original array
+    delete arr[1];
+
+
+
+
+
+
+
+Concat Method example: 
+let arr1 = [1,2,3];
+let arr2 = [4,5,6];
+let arr3 = [7,8,9];
+arr1.concat(arr2,arr3) ----> gives the concated array , by modifiying arr1
+
+
+
+
+
+
+
+
+
+Sort method
+
+sort method modifies the original array
+sort() ~ sort(compare)
+const compare = (a,b) =>{
+    return a - b // ascending order(default)
+    return b-a // descending order
+}
+
+
+
+
+from , for of, for in methods : 
+
+Array.from() is used to create an array from any other object(collection/list...)
+
+
+
+
+
+
+
+
+// Higher Order Functions
+
+A higher order function performs one or both of the following functionalities
+    1. Takes one or more functions as parameter
+    2. Returns a function as parameter
+
+These are the higher order functions which are mostly used: 
+    1.forEach()
+    2.map()
+    3.filter()
+    4.reduce()
+
+const arr = [1,2,3];
+
+forEach():
+    Calls a function once for each array element
+
+    a.forEach((value,index,array)=>{
+        //function logic
+    });
+
+
+
+
+map():
+    Creates a new array by performing some operation on each array element but doesn't modify the original array
+
+      a.map((value,index,array)=>{
+       return value * value;
+    });
+
+
+
+
+filter():
+    filters an array with values that pass a test & creates a new array; but doesn't modify the original array
+
+    a.filter(greate_than_2);
+
+
+
+
+reduce():
+    reduces an array to single value
+    a.reduce((p,q)=>{
+        return p+q;    
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Java Script in Browsers:
+
+
+
+
+
+
+
+
+Html is the skeleton of the webpage
+CSS adds styling to the webpage 
+JS adds logic to the webpage 
+
+Advantages of using script tag 
+    1. Seperation of Concerns
+    2. Browser Caching
+
+
+
+
+
+console methods:
+
+The console object has several methods such as;
+
+console.clear() ---> clears the console
+console.assert() ---> used to assert a
+console.log() ---> outputs the message to the console
+console.table() ---> displays a tabular data
+console.warn() --->  used to display warnings
+console.error() ---> used for  displaying errors
+console.info() ----> used for displaying special information
+console.time("label") & console.timeEnd("label ") -----> Executing both the statements gives time taken for the process/variable/statement
+
+
+
+we can access all the methods by consoling console object ----> console.log(console)
+
+
+
+
+
+// alert,confirm,prompt
+
+alert() 
+    used to invoke a mini window with a message
+    alert("Hello koushik");
+
+prompt() 
+    used to take user input as a string
+    prompt("Enter your name ", "user")    -----> user is a default value
+confirm() ------> displays a message and waits for the user to click ok or cancel
+
+For all these methods/actions the exact location is determined by browser which is a limitation. Blocks the webpage access until & unless we dismiss the popped window
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DOM ,BOM & window Object
+
+when Javascript runs in a browser we have 
+
+ 
+window ----> DOM
+       ----> BOM
+       ----> JS Core
+
+
+window object represents browser window & provides methods to control it, it is a global Object.
+
+
+
+
+
+DOM - Document Object Model
+
+DOM represents the page as HTML 
+document.body ---> html page body as JS object
+
+
+BOM -  Browser Object Model 
+
+BOM represents additional objects provided by the browser for working with everything except document. All these functions alert(),confirm(),prompt() are part of BOM
+EX: location.href = "www.google.com" -----> (redirects the page to that url)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DOM Tree:
+DOM tree refers to the html page where all the nodes are objects. There are three types of nodes in the DOM Tree: text nodes, element nodes, comment nodes
+
+
+For example in  a html page;
+<html> is the parent node 
+<head>, <body> are the children node
+
+A text node is always a leaf node.
+
+
+Autocorrectness : 
+If an erroneous html is encountered by the browser,it tends to correct it
+Ex: If we had a html tag outside the body, it is automatically moved inside the body.
+
+
+
+document -----
+
+document.head
+document.body
+document.documentElement (Html tag)
+
+Sometimes document.body gives null if js is written before the body tag 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Element's Children,Parent,Sibiling: 
+
+
+
+
+
+Child Nodes : 
+
+
+Direct or deeply nested elements of an element are called its children
+child Nodes : Elements that are direct nodes of an element are called child nodes.
+descendent nodes : All nested elements and their nested elements are descendent nodes
+
+
+
+First child Element : element.firstChild
+Last child Element : element.lastChild
+Child nodes : element.child nodes
+
+
+element.childNodes[0]  === element.firstChild
+element.childNodes[element.childNodes.length -1] === element.lastChild
+element.hasChildNodes() ---> returns a boolean value of whether there exists any child nodes
+
+childNodes look like an array but they are not, they are collection. Array methods wont work on them. we can use Array.from(collection) to convert it into an array and then use the array methods
+
+DOM collections are read-only they get updated automatically if any element is added /removed. These can be iterated using a for of loop
+
+
+
+
+
+
+
+
+
+// Sibilings and Parent Nodes : 
+Sibilings are nodes that are children of same parent
+EX: 
+
+    <head>, <body> are the children of <html>, So <head> & <body> are Sibilings
+
+    <body> is said to be the next sibiling/ right sibling of <head>
+    <head> is said to be the previous sibiling/left sibiling of <body>
+
+
+
+//Difference between parent Node and parent Element
+
+parentNode returns the entity irrespective of being node or not
+parentElement return  the entity only if its a node
+
+
+
+
+
+
+
+
+
+//Element only navigation :
+
+Sometimes we might need only element to element navigation
+EX:
+
+    document.previousElementSibling
+    document.nextElementSibling
+    document.firstElementChild
+    document.lastElementChild
+
+
+
+Difference b/w firstChild and firstElementChild
+firstChild can be textnode(space), commentnode (comments), element node(html tag)
+firstElementChild will be a element node(html tag) only.
+
+
+
+
+Certain DOM Elements may provide additional properties specific to their type for convience. Table element supports the following properties:
+
+table.rows -----> collection to tr elements
+table.caption -----> reference to <caption>
+table.thead ----> reference to <thead>
+table.tfoot ----> reference to <tfoot>
+table.tBodies ----> collection of <tbody> elements
+tbody.rows  -----> collection of <tr> inside
+tr.cells -----> Collection  of td & th
+tr.sectionRowIndex -----> Index of tr inside enclosing element
+tr.rowIndex ------> Row number starting from 0
+td.cellIndex -----> no.of cells inside enclosing <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//DOM Search :
+
+DOM Search methods are required if required elements is not nearer coz navigation will be difficult for farthest elements.
+
+1. document.getElementById("") ---> This method is used to get the element with given id
+2. document.querySelectorAll(" ") ---> returns all elements matching the css selector
+3. document.querySelector(" ") ----> returns the first element for given css selector 
+4. document.getElementsByTagName(" ") ----> returns elements with that tag name
+5. document.getElementsByClassName(" ") ----> returns elements with that class name
+6. document.getElementsbyName(" ")  -----> returns elements with that attribute name
+
+
+
+
+
+
+
+
+
+//matches,closest,contains :
+
+There are three important methods to Search the DOM
+
+1. element.matches(css)  -----> To check if the element matches the given css selector
+2.element.closest(css) -----> To look for the nearest ancestor that matches the given   css   selector. 
+The element itself is also checked
+3.elementA.contains(elementB) ---> returns true(a boolean value) if element B is present in element A (or) (element A === element B)
+
+
+
+console.dir() shows element as an object with its properties.
+console.log() shows element DOM tree
+
+
+
+
+//TagName vs NodeName
+TagName exists only for element nodes wehereas NodeName exists for all the nodes (text,element,comment)
+
+
+
+
+
+
+
+//DOM properties: 
+
+
+innerHtml : This property works only for element nodes and it gets the html inside an element as a  string. For comment/text nodes we can use nodevalue or data.
+
+
+
+outerHtml : This property gives the complete HTML i.e full HTML  = innerHTML + the element itself
+
+
+innerText : displays only the text inside the element tags
+
+textContent : similar to innerText property, provides access to text excluding all the tags
+
+
+hidden : The hidden attribute and the DOM property specifies whether the element is visible or not in accordance with hidden being false/true.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Attribute methods:
+
+element.hasAttribute(name) ----> checks the existence of an attribute
+element.getAttribute(name) ----> used to get the value of an attribute
+element.setAttribute(name) ----> used to set the value of an attribute
+element.removeAttribute(name) ----> used to remove the attribute from the element
+element.attributes ----> returns a collection of attributes for that element
+
+
+
+
+
+we can always create custom attributes; but the ones that begin with `data-` are reserved for programmers use, they are available in a property named 'dataset'
+
+EX: if an element has an attribute `data-one` it is available as element.dataset.one
+
+
+
+
+
+
+//Insertion Methods
+
+Insertion can be done by getting access of an element and manipulating the innerHTML.But there are some more methods for insertion
+
+element.append(new_element);
+
+node.append(new_element): inserts at the end of the node collection
+node.prepend(new_element): inserts at the beginning of the node collection
+node.before(new_element): inserts before node
+node.after(new_element): inserts after node
+node.replacewith(new_element): replaces node with given node
+
+
+
+
+
+
+//Insert adjacent html/text/element
+This method is also used to insert html, The first parameter must be one of the following code word specifying where to insert. The second parameter is a html string
+
+1.beforebegin: Insert html immediately before element
+2.afterbegin: Insert html into element at the beginning
+3.beforeend: Insert html into element at the end
+4.afterend: Insert html immediately after element
+
+
+
+
+
+
+
+
+
+
+//Browser Events
+An event is a signal that something has happened. All the DOM nodes generate such signals
+
+some important DOM Events are : 
+
+Mouse Events : click, context-menu(right-click), mouse-over/mouse-out, mousedown/mouseup, mousemove
+Keyboard Events : keydown and keyup
+form element events : submit , focus etc  
+Document events : DOM Content Load
+
+
+
+
+Handling Events : 
+    Events can be handled through HTML attributes
+    Adding a handler with JS overwrites existing handler
+
+
+
+
+addEventListener and removeEventListener:
+    
+Syntax : 
+    element.addEventListener(event,handler);
+    element.removeEventListener(event,handler);
+
+    handler must be the same object for this to work. Even though you copy the same handler it wouldn't work coz the reference is different
+    in other words the reference to the handler must be the same.
+
+
+addEventListener is used to  assign multiple handlers to an event
+
+
+
+
+
+
+
+
+
+
+
+
+Event Object :
+
+
+When an event happens the browser creates an event object put details into it and passes it as an argument to the handler.
+
+
+EX: element.onClick = function(event){
+
+}
+
+ Now event object has the following proprties:
+event.type : Event type
+event.currentTarget: Element that handled the event 
+event.clientX : Co-ordinates of the cursor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+callbacks, promises & async/await:
+
+ 
+
+Asynchronous Actions:
+    The actions that we intiate now and they finish later 
+    Ex: setTimeOut
+
+Synchronous Actions :
+    Actions that intiate and finish one-by-one
+
+
+
+Callback Functions;
+    A callback function is a function that is passed into another function as an argument, which is then invoked
+    inside the outer function to complete an action.
+
+    In Simple words, a function is passed inside another function as parameter. where the former is invoked inside the later.
+    
+    This is called callback based async programming... A function that does asynchronously should provide a callback argument where we put the function to run after its complete 
+
+
+    EX: 
+        function loadScript(src,callback){
+            var script = document.createElement('script')
+            script.src = src;
+            script.onload = function(){
+                console.log("Loaded script with SRC: " + src);
+                callback(src);
+            }
+            document.body.appendChild(script);
+        }
+
+
+        function hello(src){
+            alert('Hello World' + src);
+        }
+
+        loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js", hello);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cookies in JS :
+    Cookies are Small Strings of data stored in web browser. 
+    Total no.of cookies per domain is limited to around 20+(depends on the browser)
+    
+    Cookies are set by the web-server using Set Cookie HTTP-Header.Next time when the request is sent to the same domain , the browser sends the cookie using  Cookie HTTP-header, in this manner the server knows who sent the request.
+
+    Cookies are accessed using document.cookie.
+    Cookies are stored in key=value pairs seperated by a ;
+    
+    An assignment to a cookie is treated specially in a way that a writer operation doesn't touch other Cookies.
+    When you write into document.cookie it doesn't replace the older cookies it justs add to the older cookies 
+    Ex: document.cookie = "user = KOUSHIK" ----> this updates the cookie named user
+
+
+    Encode URI Component :
+        This function helps keep the valid formatting(especially in the case of special characters). 
+        It is used like this ----> document.cookie = encodeURIComponent(key)+ = + encodeURIComponent(value) 
+     
+    Decode URI Component :
+        This function helps to get the actual valid formatting(especially in the case of special characters). 
+        It is used like this ----> decodeURIComponent(key);
+    
+    Cookie Options: 
+        Cookies have several options which can be provided after key=value pair sadly these are included as well 
+        seperated by a ;
+        some options are : path,expires etc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Local Storage : 
+    local storage is a web storage object which are not sent to server with each request, this data survives a full page refresh and even a full browser restart
+
+    Stores data in the form of key-value pairs
+
+    Methods:
+        1.localStorage.setItem(key,value) ---> stores key-value pair
+        2.localStorage.getItem(key) ---> gets the value  of the key stored in local storage
+        3.localStorage.removeItem(key) ---> removes the key-value pair from local storage
+        4.localStorage.get(index) ---> gets the key at the given position
+        5.localStorage.length---> gives the total no.of key-values pairs in local storage
+        6.localStorage.clear()---> empties the local storage
+
+    We can get and set values into local storage just as we done for objects in JS
+        EX: localStorage.userId = 23;
+
+    Important Methods : 
+        Json.Stringify() --> Converts objects to JSON Strings
+        Json.parse()    ---> Converts JSON String to Objects(must be a valid JSON String)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Session Storage:
+    Used less often than local storage but, properties and methods are same as local storage
+
+    It differs in some aspects such as : 
+
+    1. The session storage exists only within a current browser tab, another tab  with same page will have a    differenet session storage
+
+    2. The data survives page refresh, but not closing/opening tab
+
+
+
+
+Storage Event : 
+
+
+    localStorage and session storage can be seen on the browser as follows :  F12 ---> Application --> localStorage/sessionStorage
+
+    When the data gets updated in localStorage or sessionStorage, storage event triggers with these properties; 
+    1. key - The key
+    2.old value - previous value
+    3.new value - new value
+    4.url - page URL
+    5.storage area - localStorage/sessionStorage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Object-Oriented Programming :
+
+    OOP improves code readability
+
+    OOP is possible through JS as well. JS object have special property called prototypes. prototype that is either null or reference of another object.       
+
+    when we try to read a proprty from an object and if it is missing then JS automatically takes it from the prototype. This is called prototype inheritance
+
+   prototype inheritance happens only if the required property is missing from the object and if any property is not available then it checks all through the chain of prototypes
+    setting prototype ---> obj1.__proto__ = obj2
+
+
+    Class is an extensible programming code template used for creating objects , providing intial values for state(instance variables) and implementation of behavior(member functions)
+    
+    Object is an instance of the class 
+
+    Constructor is invoked when an object is created; it is used for intializing the variables and methods of an object
+
+
+
+
+
+    Inheritance: 
+        Inheritance is a fundamental property of OOP where a class gets derived from another class using 'extends' keyword.
+
+        The class that is derived is called derived class/ sub class, and the class from which it is derived is known as base class/ super class.
+
+
+
+        Method Overriding: 
+            Method Overriding comes only at the concept of inheritance; when re write a method of base class in derived class then the phenomenona is called method Overriding
+
+        super:
+            This keyword is used to access the base class variables and methods from the derived class. 
+            Also used to invoke the base class constructor 
+            Syntax:  
+                super(...argz) ---> invoking constructor
+                super.name -----> invoking base class variable
+                super.greet() -----> invoking base class methods
+            Also, the invoking of constructors always begins from the supermost class
+            
+        Constructor Overriding: 
+                If there is no constructor in the derived class then a constructor gets generated automatically.
+                If there is constructor in the derived class then it must call the super(....arg)
+
+
+
+    Static Methods/Variables:
+        Static Methods/variables are used to implement functions that belong to a class as a whole and to any particular object.
+
+        Static Methods/Variables are invoked using class name.
+
+    Getters,Setters, instanceOf:
+        get is a keyword written before a function which is used get a member variable of a class.
+        set is a keyword written before a function which is used set a member variable of a class.
+        instanceOf is an operator which allows to check whether an object belongs to certain class or not.
+            returns boolean value on consoling
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Advanced Java Script
+
+
+
+
+Concepts that make Life of JS Developer easier :
+    
+
+    IIFE : Immediately Invoked Function Expressions:
+        This function runs as soon as it is defined
+        Syntax: 
+            ( function(){
+                ...
+                ...
+            }) (); 
+
+        It is used to avoid polluting global namespace , execute async-await etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JS at Server -----> Node JS
+
+JS written at Client is visible to the outside world when they view the page source but JS written at backend(Server) is hidden and can't be seen.
+
+
+NODE JS REPL - Read Evaluate Print Loop
+
+It is different from repl we use from replit.com
+
+
+
+
+NPM - node package manager 
+
+
+
+to compile a node JS file -----> we write `node file_name`
+
+`npm init` ---> used to initializa a project as a npm project
+`npm init -y` ---> shothand for above command most frequently used
+
+
+The above init command generates a file named package.json
+
+
+`npm i` ------> used to install the node modules (A node_modules folder gets generated it has the packages and ependencies  required for the project) 
+
+
+
+
+
+
+Instead of npm Sometimes people use yarn which is quite a little faster but remains the same as npm
